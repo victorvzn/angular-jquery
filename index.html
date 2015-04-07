@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="libs/select2/select2.css" />
+</head>
+
+<body ng-app="myapp">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-push-4 col-xs-4 text-center">
+                <p>&nbsp;</p>
+                <select id="e1" my-select>
+                    <option value=""></option>
+                    <option value="AL">Alabama</option>
+                    <option value="HA">Hawaii</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="libs/select2/select2.js"></script>
+    <script type="text/javascript" src="libs/angular/angular.js"></script>
+    <script>
+        angular.module('myapp', [])
+            .directive('mySelect', function() {
+                return {
+                    restrict: 'A',
+                    link: function(scope, element, attrs) {
+                        $(element).select2({
+                            placeholder: "Select a Country"
+                        });
+                    }
+                 };
+            });
+    </script>
+</body>
+</html>
