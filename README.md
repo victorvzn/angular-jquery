@@ -7,4 +7,3 @@ Este ejemplo usa "Directives" de Angular.js para integrar plugins jQuery en nues
 # Uso:
 
   $ python -m SimpleHTTPServer 3000
-  http://localhost:3000
